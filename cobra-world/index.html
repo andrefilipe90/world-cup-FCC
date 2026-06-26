@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cobra World</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="game-shell is-menu">
+      <canvas id="game" aria-label="Cobra World"></canvas>
+
+      <section class="hud" aria-label="Painel do jogo">
+        <div>
+          <strong>Cobra World</strong>
+          <span>Teste 01</span>
+        </div>
+        <div class="stats">
+          <span id="coinHud">Moedas 0</span>
+          <span id="position">X 0 / Y 0</span>
+          <span id="speed">Vel 0</span>
+          <span id="powerHud">Poder Nenhum</span>
+          <span id="botHud">Computadores 0</span>
+          <span id="onlineHud">Online 0</span>
+        </div>
+      </section>
+
+      <button class="reset-button" id="resetButton" type="button">Reiniciar</button>
+      <div class="event-message" id="eventMessage" role="status" aria-live="polite"></div>
+
+      <section class="start-screen" id="startScreen" aria-label="Tela inicial">
+        <nav class="menu-topbar" aria-label="Menu do jogador">
+          <button class="menu-tab" id="wardrobeButton" type="button">Vestuário</button>
+          <span class="menu-pill" id="coinCounter">Moedas 0</span>
+          <span class="menu-pill" id="recordCounter">Recordes 0s</span>
+          <button class="menu-tab" id="settingsButton" type="button">Configurações</button>
+        </nav>
+
+        <div class="start-content">
+          <span id="menuStatus">Teste 02</span>
+          <h1>Cobra World</h1>
+          <section class="wardrobe-panel is-collapsed" id="wardrobePanel" aria-label="Vestuário">
+            <h2 class="wardrobe-title">Vestuário</h2>
+            <strong>Skin</strong>
+            <div class="lightness-control">
+              <label for="lightnessSlider">Clarear</label>
+              <input id="lightnessSlider" type="range" min="0" max="55" step="5" value="0" />
+              <span id="lightnessValue">0%</span>
+            </div>
+            <div class="skin-swatches" id="skinSwatches" aria-label="Cores da cobra"></div>
+            <strong>Roupas e acessórios</strong>
+            <div class="accessory-list" id="accessoryList" aria-label="Acessórios da cobra"></div>
+          </section>
+          <section class="settings-panel is-collapsed" id="settingsPanel" aria-label="Configurações">
+            <h2 class="wardrobe-title">Configurações</h2>
+            <strong>Som</strong>
+            <div class="volume-control">
+              <label for="volumeSlider">Volume</label>
+              <input id="volumeSlider" type="range" min="0" max="100" step="5" value="100" />
+              <span id="volumeValue">100%</span>
+            </div>
+          </section>
+          <button class="play-button" id="playButton" type="button">Jogar</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
