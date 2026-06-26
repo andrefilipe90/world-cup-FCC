@@ -5,6 +5,7 @@
     "main.part3.js",
     "main.part4.js",
     "main.part5.js",
+    "main.part6.js",
   ];
 
   Promise.all(parts.map((part) => fetch(part, { cache: "no-store" }).then((response) => {
